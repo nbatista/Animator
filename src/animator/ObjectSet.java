@@ -10,16 +10,27 @@ import java.util.Random;
 class ObjectSet {
     
     private Image[] images;
+    private Dimension D;
+    private Motion move;
+    
+    Random rnd;
+
+    ObjectSet(Dimension dim) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
     // Adiciona objetos da classe Image ao ObjectSet.
     // O codigo abaixo eh somente um teste e precisa ser substituido.
     void addImages(int n, Dimension dim, BufferedImage image, String path) {
-        System.out.printf("Test: adding %d images\n", n);
-        System.out.printf("Test: motion path %s\n", path);
+        //System.out.printf("Test: adding %d images\n", n);
+        //System.out.printf("Test: motion path %s\n", path);
         images = new Image[n];
-        for (int i = 0; i < images.length; i++) {
-            Point p = new Point(10,10);
-            images[i] = new Image(p, image);
+        for (int i = 0; i < images.length; i++)
+        {
+            int a = rnd.nextInt(dim.width);
+            int b = rnd.nextInt(dim.height);
+            images[i] = new Image( a, b, image, path);
         }
     }
     
@@ -48,12 +59,22 @@ class ObjectSet {
     // Desenha cada um dos objetos da animacao.
     // O codigo abaixo eh somente um teste e precisa ser substituido.
     void drawAll(Graphics g) {
-        System.out.println("drawAll");
+        for (int i = 0; i < images.length; i++)
+        {
+            images[i].draw(g);
+        }
     }
 
     // Move cada um dos objetos da animacao.
     // O codigo abaixo eh somente um teste e precisa ser substituido.
     void moveAll() {
-        System.out.println("moveAll");
+        for (int i = 0; i < images.length; i++)
+        {
+            if (images[i].rout.equalsIgnoreCase("Line"))
+            {
+                images[i].seti(move.linear(images[i].geti(),images[i].getj()));
+            }
+           
+        }
     }
     }

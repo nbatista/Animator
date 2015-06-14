@@ -108,7 +108,7 @@ public class AnimatorController {
     
     // Cria objetos da animacao conforme configurado na interface grafica
     private void createObjectSet() throws Exception {
-        objs = new ObjectSet();
+        objs = new ObjectSet(dim);
         
         // Inicio da criacao dos objetos Image
         int nImages = (Integer) view.getSpinnerImages().getValue();
@@ -125,9 +125,9 @@ public class AnimatorController {
         ShapeType shapeType = (ShapeType) view.getComboShape().getSelectedItem();
         String pathShapes = (String) view.getComboPathShapes().getSelectedItem();
         switch (shapeType) {
-            case Star: objs.addStars(nShapes, dim, pathShapes); break;
-            case Rectangle: objs.addRectangles(nShapes, dim, pathShapes); break;
-            case Circle: objs.addCircles(nShapes, dim, pathShapes); break;            
+            //case Star: objs.addStars(nShapes, dim, pathShapes); break;
+            //case Rectangle: objs.addRectangles(nShapes, dim, pathShapes); break;
+            //case Circle: objs.addCircles(nShapes, dim, pathShapes); break;            
         }
         // Fim da configuracao dos objetos com formas geometricas
     }

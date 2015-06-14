@@ -13,7 +13,7 @@ class Image {
     private int j;
     String rout;
 
-    public Image(/*Point pos,*/ BufferedImage img, int i, int j, String rout) {
+    public Image(/*Point pos,*/ int i, int j, BufferedImage img, String rout) {
         //this.pos = pos;
         this.img = img;
         this.i = i;
