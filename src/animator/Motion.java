@@ -33,7 +33,7 @@ public class Motion {
     
     public int linear(int i, int j){
         if (i >  (int)(D.getWidth())){
-            return -40;
+            return -30;
         }
         i += 10;
         return i;

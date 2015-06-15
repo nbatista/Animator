@@ -15,10 +15,11 @@ class ObjectSet {
     
     Random rnd;
 
-    ObjectSet(Dimension dim) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+     ObjectSet(Dimension D) {
+        this.D = D;
+        move = new Motion(0,0,D);
+        rnd = new Random();
+    }    
     
     // Adiciona objetos da classe Image ao ObjectSet.
     // O codigo abaixo eh somente um teste e precisa ser substituido.
@@ -30,7 +31,7 @@ class ObjectSet {
         {
             int a = rnd.nextInt(dim.width);
             int b = rnd.nextInt(dim.height);
-            images[i] = new Image( a, b, image, path);
+            images[i] = new Image(a, b, image, path);
         }
     }
     
