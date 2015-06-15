@@ -47,6 +47,7 @@
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -107,7 +108,7 @@
                           <Component id="textWidth" max="32767" attributes="0"/>
                           <Component id="textHeight" min="-2" pref="145" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="53" max="32767" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -196,22 +197,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Width"/>
+        <Property name="text" type="java.lang.String" value="Largura"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Speed"/>
+        <Property name="text" type="java.lang.String" value="Velocidade"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Height"/>
+        <Property name="text" type="java.lang.String" value="Altura"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="# of objects"/>
+        <Property name="text" type="java.lang.String" value="Numero de objetos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="comboPathImages">
@@ -230,6 +231,9 @@
           <Connection code="AnimatorController.getDefaultFilename()" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textImageActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="spinnerImages">
       <AuxValues>
@@ -239,17 +243,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Image"/>
+        <Property name="text" type="java.lang.String" value="Imagem"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Motion Path"/>
+        <Property name="text" type="java.lang.String" value="Movimento"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Object"/>
+        <Property name="text" type="java.lang.String" value="Objeto"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
@@ -305,10 +309,13 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboPathShapesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Shape"/>
+        <Property name="text" type="java.lang.String" value="Forma Geometrica"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="spinnerShapes">
@@ -323,6 +330,9 @@
           <Connection code="new javax.swing.DefaultComboBoxModel(ShapeType.values())" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboShapeActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
