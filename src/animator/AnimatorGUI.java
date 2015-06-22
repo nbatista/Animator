@@ -73,7 +73,7 @@ public class AnimatorGUI extends javax.swing.JFrame {
 
         jLabel8.setText("Numero de objetos");
 
-        comboPathImages.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Circle", "Line" }));
+        comboPathImages.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "LinearV", "LinearH" }));
 
         textImage.setText(AnimatorController.getDefaultFilename());
         textImage.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +114,7 @@ public class AnimatorGUI extends javax.swing.JFrame {
             }
         });
 
-        comboPathShapes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Zoom", "Circle", "Line" }));
+        comboPathShapes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "LinearH", "LinearV" }));
         comboPathShapes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboPathShapesActionPerformed(evt);
@@ -284,13 +284,13 @@ public class AnimatorGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textImageActionPerformed
 
-    private void comboShapeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboShapeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboShapeActionPerformed
-
     private void comboPathShapesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboPathShapesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboPathShapesActionPerformed
+
+    private void comboShapeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboShapeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboShapeActionPerformed
 
     /**
      * @param args the command line arguments

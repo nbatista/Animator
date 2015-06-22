@@ -11,31 +11,22 @@ import java.awt.Dimension;
  *
  * @author nbati_000
  */
-public class Motion {
-    double rout;
+public class LinearH {
     int i;
-    int j;
     Dimension D;
 
-    public Motion(int i, int j, Dimension D) {
+    public LinearH(int i, Dimension D) {
         this.i = i;
-        this.j = j;
         this.D = D;
-        rout = 1.2;
-    }
-    
-    public Motion(int[] a){
-        i = a[0];
-        j = a[1];
     }
     
    
     
-    public int linear(int i, int j){
+    public int linear(int i){
         if (i >  (int)(D.getWidth())){
-            return -30;
+            return 0;
         }
-        i += 10;
+        i += 3;
         return i;
     }
 }

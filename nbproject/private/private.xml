@@ -4,10 +4,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/Image.java</file>
             <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/ObjectSet.java</file>
-            <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/Motion.java</file>
             <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/AnimatorController.java</file>
+            <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/AnimatorGUI.java</file>
+            <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/Rectangle.java</file>
+            <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/AnimationPanel.java</file>
+            <file>file:/C:/Users/nbati_000/Documents/GitHub/Animator/src/animator/LinearH.java</file>
         </group>
     </open-files>
 </project-private>

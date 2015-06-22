@@ -13,15 +13,18 @@ class ObjectSet {
     private Image[] images;
     private ArrayList<Rectangle> rectangles;
     private Dimension D;
-    private Motion move;
+    private LinearH lineh;
+    private LinearV linev;
     
     Random rnd;
 
     ObjectSet(Dimension D) {
         this.D = D;
-        move = new Motion(0,0,D);
+        lineh = new LinearH(0,D);
         rnd = new Random();
         rectangles = new ArrayList<Rectangle>();
+        linev = new LinearV(0,D);
+        
     }
     
     
@@ -61,8 +64,7 @@ class ObjectSet {
     // Adiciona objetos da classe Star ao ObjectSet.
     // O codigo abaixo eh somente um teste e precisa ser substituido.
     void addCircles(int n, Dimension dim, String path) {
-        System.out.printf("Test: adding %d quadrados\n", n);
-        System.out.printf("Test: motion path %s\n", path);
+        
     }
     
     // Desenha cada um dos objetos da animacao.
@@ -76,6 +78,7 @@ class ObjectSet {
         {
             rectangles.get(i).draw(g);
         }
+       
     }
 
     // Move cada um dos objetos da animacao.
@@ -84,14 +87,24 @@ class ObjectSet {
         
         
             if (images!=null)
-                for (int i = 0; i < images.length; i++)
-                images[i].seti(move.linear(images[i].geti(),images[i].getj()));
+                for (int i = 0; i < images.length; i++){
+                    if (images[i].rout.equalsIgnoreCase("LinearH"))
+                        images[i].seti(lineh.linear(images[i].geti()));
+            
+                    if (images[i].rout.equalsIgnoreCase("LinearV"))
+                        images[i].setj(linev.linear(images[i].getj()));
+                }
             
            
             if(rectangles!=null)
-                for (int i = 0; i < rectangles.size(); i++)
-                rectangles.get(i).seti(move.linear(rectangles.get(i).geti(), rectangles.get(i).getj()));
-                   
+                for (int i = 0; i < rectangles.size(); i++){
+                    if (rectangles.get(i).getrout().equalsIgnoreCase("LinearH"))
+                        rectangles.get(i).seti(lineh.linear(rectangles.get(i).geti()));
+                    if (rectangles.get(i).getrout().equalsIgnoreCase("LinearV"))
+                        rectangles.get(i).setj(linev.linear(rectangles.get(i).getj()));
+                }
+            
+           
         
     }
     }

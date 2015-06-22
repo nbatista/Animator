@@ -26,9 +26,7 @@ enum Speed {
 }
 
 enum ShapeType {
-    Estrela,
-    Retangulo,
-    Circulo;
+    Retangulo;
 }
 
 public class AnimatorController {

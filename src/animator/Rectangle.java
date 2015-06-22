@@ -42,7 +42,14 @@ public class Rectangle {
         this.j = j;
     }
 
-    
+    public String getrout() {
+        return rout;
+    }
+
+    public void setrout(String rout) {
+        this.rout = rout;
+    }
+
     public void draw(Graphics g){
         g.setColor(Color.green);
         g.fillRect(i, j, width, height);
