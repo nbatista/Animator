@@ -12,6 +12,7 @@ class ObjectSet {
     
     private Image[] images;
     private ArrayList<Rectangle> rectangles;
+    private ArrayList<Circle> circles;
     private Dimension D;
     private LinearH lineh;
     private LinearV linev;
@@ -23,6 +24,7 @@ class ObjectSet {
         lineh = new LinearH(0,D);
         rnd = new Random();
         rectangles = new ArrayList<Rectangle>();
+        circles = new ArrayList<Circle>();
         linev = new LinearV(0,D);
         
     }
@@ -64,7 +66,12 @@ class ObjectSet {
     // Adiciona objetos da classe Star ao ObjectSet.
     // O codigo abaixo eh somente um teste e precisa ser substituido.
     void addCircles(int n, Dimension dim, String path) {
-        
+        for (int i = 0; i < n; i++)
+        {
+            int a = rnd.nextInt(dim.width);
+            int b = rnd.nextInt(dim.height);
+             circles.add(new Circle( a, b, path));
+        }
     }
     
     // Desenha cada um dos objetos da animacao.
@@ -77,6 +84,10 @@ class ObjectSet {
         for (int i = 0; i < rectangles.size(); i++)
         {
             rectangles.get(i).draw(g);
+        }
+        for (int i = 0; i < circles.size(); i++)
+        {
+            circles.get(i).draw(g);
         }
        
     }
@@ -102,6 +113,13 @@ class ObjectSet {
                         rectangles.get(i).seti(lineh.linear(rectangles.get(i).geti()));
                     if (rectangles.get(i).getrout().equalsIgnoreCase("LinearV"))
                         rectangles.get(i).setj(linev.linear(rectangles.get(i).getj()));
+                }
+            if(circles!=null)
+                for (int i = 0; i < circles.size(); i++){
+                    if (circles.get(i).getrout().equalsIgnoreCase("LinearH"))
+                        circles.get(i).seti(lineh.linear(circles.get(i).geti()));
+                    if (circles.get(i).getrout().equalsIgnoreCase("LinearV"))
+                        circles.get(i).setj(linev.linear(circles.get(i).getj()));
                 }
             
            
